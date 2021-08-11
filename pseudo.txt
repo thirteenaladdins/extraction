@@ -1,0 +1,79 @@
+
+Okay. 
+
+Alkos could be easier
+
+Mann + Hummel CSV - sort and order 
+
+Mann + Hummel - 1.4.5 - RX - there will be an extra box to tick 
+Next few steps - 
+
+How do we do this? 
+If there's an SI-S coupled with an SIA and SIC then group
+
+So first input every file you want on that entry - 
+Get as much information from the invoice as possible. Add the invoice number to each item
+
+1. The process will be - add your files to the folder - so download them first add them to the folder with the scripts
+2 . type cmd in the top bar
+3. python script.py add each subsequent file into the command line - don't miss any
+4. delete the files afterwards? create a new folder 
+
+
+
+0. look out for Canopies which are declared as their own item - (add this after all is done)
+TODO - support multiple files more simply in CLI
+ALWAYS CHECK THE RESULTS BEFORE MOVING FORWARDS
+
+add -y will accept all as blank apart from the currency
+currency will always be prompted for at the beginning
+
+// the more information we can add the better
+// any data used for RX template can be added here 
+0.1 - CLI interface - prompt - ask for currency -
+add a  for reference for the worksheet
+we could potentially add all the data here if we wanted 
+vehicle number
+consignor short code 
+consignee short code
+
+ADD LIC 99 to every item 
+
+if left blank you can leave them all blank 
+
+if GBP do nothing - if OTHER add exchange rate and convert by that number, simple
+will there be anything else? I think that's the only one
+anyway if there's anything else add it after
+
+1. input files - CLI - one file each time - MAGIC Williams folder
+2. analyse each of the invoices one by one and save the data from each one
+3. 
+4. If the invoice is an SI- A - extract the kg, total value and information from the trailers
+5. Same for SI- C, store that information somewhere - hopefully in a table somewhere
+6. If SI-S detected, logic is already complete - so append that to the table if necessary
+7. consolidate the information - (should only be SI-A and SI-C ) - this info will be on the first line, (add canopies as well)
+8. So we have created a table that we will now output to a new CSV file
+9. RX file will be the default here. We can have two options - normal CSV or RX CSV
+9.1 - Add LIC99, other small details to make the process simpler
+
+// we don't actually need the short codes but - the short code for IWT and IFORWILLI
+// could already be in the program so the short code is already filled out there
+// the goal is to add as much information as possible to the RX worksheet as possible. 
+
+// where we will also save time is knowing that we don't have to check anything because the item values
+// will be the same as what the invoice states
+
+// we also need to calculate the total packages for the extra two columns and header packages
+// that should be everything. 
+// I'll add the extra logic when I need it later on. 
+// this should really be everything. I'm almost done. 
+
+Extras: 
+10. If the program detects the provided RX file will have an extra row where the INV trailers will be created with 
+// also needs another short code IWT for this to work - we'll do that later 
+
+If we also add an INV file then we should add a new line with a new reference - this is possible but maybe unnecessary
+lets leave this one for now, if you want to create a second thing then run the program again. keep it simple. 
+
+split that into four 
+
